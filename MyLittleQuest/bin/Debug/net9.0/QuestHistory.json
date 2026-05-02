@@ -1,0 +1,15 @@
+[
+    // Quest history save file is here
+  {
+    "$type": "escort",
+    "NPCObject": null,
+    "NPCCount": 3,
+    "Distance": 52,
+    "DefeatedEnemyCount": 0,
+    "Title": "Escort GigaChad",
+    "Description": "Escort GigaChad to the Sigma male party before he loses himself to becoming gay",
+    "Difficulty": 2,
+    "Reward": "Ahmet\u0027s Wise Lessons",
+    "QuestGiver": "Angela Merkel"
+  }
+]

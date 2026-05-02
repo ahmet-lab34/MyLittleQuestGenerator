@@ -1,0 +1,280 @@
+﻿public class NPC
+{
+    #region Declaring values
+    public string Name { get; set; }
+    public string Role { get; set; }
+
+    // Keeps history of quests given
+    public List<Quest> ActiveQuests { get; private set; }
+    public List<Quest> CompletedQuests { get; private set; }
+    public List<Quest> QuestHistory { get; private set; }
+
+    private static Random rnd = new Random();
+
+    public NPC(string name, string role) {
+        Name = name;
+        Role = role;
+        ActiveQuests = new List<Quest>();     // Initialize lists
+        CompletedQuests = new List<Quest>();
+        QuestHistory = new List<Quest>();
+
+        // Load saved quests and populate NPC lists (adjust logic if you save per-NPC)
+        var saved = QuestSaves.LoadQuest();
+        if (saved != null && saved.Count > 0) {
+            ActiveQuests.AddRange(saved);
+            QuestHistory.AddRange(saved);
+        }
+    }
+    #endregion
+
+    //----- Menu Methods No NPC -----
+    #region Methods No NPC
+    public Quest GiveRandomQuest() {
+        if (ActiveQuests.Count >= 10) {
+            WriteLine("You currently have 10 active quests,\n" +
+                "Finish them first to be able to get more.");
+            return null;
+        }
+        int questType = rnd.Next(0, 3);
+
+        Quest quest;
+
+        switch (questType) {
+            case 0:
+                quest = QuestManager.RandomFetchQuest();
+                break;
+            case 1:
+                quest = QuestManager.RandomHuntQuest();
+                break;
+            default:
+                quest = QuestManager.RandomEscortQuest();
+                break;
+        }
+
+        ActiveQuests.Add(quest);
+        QuestHistory.Add(quest);                 // Track in history
+        QuestManager.AddAndSaveQuest(quest);     // Save globally
+
+        return quest;
+    }
+
+    // Give a specific type of quest
+    public Quest GiveQuest(string type) {
+        Quest quest;
+
+        switch (type.ToLower()) {
+            case "fetch":
+                quest = QuestManager.RandomFetchQuest();
+                break;
+            case "hunt":
+                quest = QuestManager.RandomHuntQuest();
+                break;
+            case "escort":
+                quest = QuestManager.RandomEscortQuest();
+                break;
+            default:
+                throw new ArgumentException("Invalid quest type");
+        }
+
+        ActiveQuests.Add(quest);
+        QuestHistory.Add(quest);
+        QuestManager.AddAndSaveQuest(quest);
+
+        return quest;
+    }
+
+    // Show only active quests
+    public Quest? ShowActiveQuests() {
+        if (ActiveQuests.Count == 0) {
+            WriteLine("No active quests.");
+            return null;
+        }
+
+        WriteLine("Active Quests:");
+        for (int i = 0; i < ActiveQuests.Count; i++) {
+            var quest = ActiveQuests[i];
+            WriteLine($"{i + 1}. {quest.Title} ({quest.GetType().Name}) | Difficulty: {quest.Difficulty}");
+        }
+
+        Write("Enter the number of the quest you want to select: ");
+        string? input = ReadLine();
+
+        if (int.TryParse(input, out int choice) &&
+            choice > 0 && choice <= ActiveQuests.Count) {
+
+            Quest selectedQuest =  ActiveQuests[choice - 1];
+
+            Clear();
+            WriteLine($"Starting quest: {selectedQuest.Title}...");
+            Thread.Sleep(2000);
+            selectedQuest.StartQuest();
+            WriteLine("Press any key to continue.");
+            ReadKey(true);
+            Clear();
+
+            switch (selectedQuest) {
+                case FetchQuest fetch:
+                    fetch.StartTheGame();
+                    CompletedQuests.Add(selectedQuest);
+                    break;
+                case HuntQuest hunt:
+                    WriteLine("This is Hunt quest game");
+                    CompletedQuests.Add(selectedQuest);
+                    break;
+                case EscortQuest escort:
+                    WriteLine("This is Escort quest game");
+                    CompletedQuests.Add(selectedQuest);
+                    break;
+                default:
+                    WriteLine("Unknown quest type");
+                    break;
+            }
+        }
+
+        else WriteLine("Invalid choice."); return null;
+    }
+    public Quest? ShowCompletedQuests() {
+        if (CompletedQuests.Count == 0) {
+            WriteLine("No completed quests.");
+            return null;
+        }
+        WriteLine("Quests that can be completed: ");
+        for (int i = 0; i < CompletedQuests.Count; i++) {
+            var quest = CompletedQuests[i];
+            WriteLine($"{i + 1}. {quest.Title} ({quest.GetType().Name}) | Difficulty: {quest.Difficulty}");
+        }
+        Write("Enter the number of the quest you want to complete: ");
+        string? input = ReadLine();
+
+        if (int.TryParse(input, out int value) &&
+            value > 0 && value <= CompletedQuests.Count) {
+
+            return CompletedQuests[value - 1];
+        }
+
+        return null;
+    }
+
+    // Complete a quest by index
+    public void CompleteQuest(int index) {
+        if (index < 0 || index >= ActiveQuests.Count) {
+            WriteLine("Invalid quest index.");
+            return;
+        }
+
+        Quest quest = ActiveQuests[index];
+        quest.CompleteQuest();
+
+        ActiveQuests.RemoveAt(index);
+        CompletedQuests.Add(quest);
+
+        // Remove from saved JSON
+        var allSaved = QuestSaves.LoadQuest();
+        allSaved.Remove(quest);
+        QuestSaves.SaveQuest(allSaved);
+
+        WriteLine($"Quest '{quest.Title}' completed!");
+    }
+    #endregion
+
+    // ---------- Menu Methods NPC ----------
+    #region Methods With NPC
+    static void GenerateNewQuest(NPC npc) {
+        Clear();
+        Quest quest = npc.GiveRandomQuest();
+        WriteLine($"New quest generated:\n");
+        quest.StartQuest();
+        WriteLine($"You now have {npc.ActiveQuests.Count} out of 10 Quests !");
+    }
+
+    static void ViewActiveQuests(NPC npc) {
+        Clear();
+        npc.ShowActiveQuests();
+    }
+
+    static void CompleteAQuest(NPC npc) {
+        Clear();
+        npc.ShowCompletedQuests();
+    }
+    public void ShowQuestHistory() {
+        Clear();
+        WriteLine($"{Name} - {Role} Quest History:");
+
+        foreach (var quest in QuestHistory) {
+            string status = CompletedQuests.Contains(quest) ? "Completed" : "Active";
+            WriteLine($"- {quest.Title} | Difficulty: {quest.Difficulty} | Status: {status}");
+        }
+    }
+    void Exit() {
+        Clear();
+        WriteLine("Exiting...");
+        WriteLine("Thanks for playing our game!");
+        Thread.Sleep(2000);
+        Environment.Exit(0);
+    }
+    #endregion
+
+    // ---------------- Menu Visual ----------------
+    #region Menu Running
+    static void Main() {
+        NPC npc = new NPC("Captain Thalia", "Guard Captain");
+
+        RunGameMenu(npc);
+    }
+
+    static void RunGameMenu(NPC npc) {
+        bool running = true;
+
+        while (running) {
+            TextMainMenu();
+
+            Write("Enter your choice: ");
+            string? input = ReadLine();
+
+            if (!int.TryParse(input, out int choice)) {
+                WriteLine("Invalid input. Please enter a number.");
+                continue;
+            }
+
+            switch (choice) {
+                case 1:
+                    GenerateNewQuest(npc);
+                    running = false;
+                    break;
+
+                case 2:
+                    ViewActiveQuests(npc);
+                    running = false;
+                    break;
+
+                case 3:
+                    CompleteAQuest(npc);
+                    break;
+
+                case 4:
+                    npc.ShowQuestHistory();
+                    break;
+
+                case 5:
+                    npc.Exit();
+                    break;
+
+                default:
+                    WriteLine("Invalid choice. Enter 1-5.");
+                    break;
+            }
+
+            WriteLine(); // spacing
+        }
+    }
+    static void TextMainMenu()
+    {
+        WriteLine("=== Quest Generator ===");
+        WriteLine("1. Generate a new quest");
+        WriteLine("2. View active quests");
+        WriteLine("3. Complete a quest");
+        WriteLine("4. View NPC quest history");
+        WriteLine("5. Exit");
+    }
+    #endregion
+}

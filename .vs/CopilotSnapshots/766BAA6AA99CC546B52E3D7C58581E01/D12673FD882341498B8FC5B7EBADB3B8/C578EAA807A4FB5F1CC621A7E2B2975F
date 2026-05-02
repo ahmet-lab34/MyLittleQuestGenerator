@@ -1,0 +1,122 @@
+﻿public abstract class Quest {
+    public string? Title;
+    public string? Description;
+    public int Difficulty = 0;
+    public string? Reward;
+    public string? QuestGiver;
+
+    public Quest(string? title, string? description,
+        int difficulty, string? reward, string? questGiver) {
+
+        Title = title;
+        Description = description;
+        Difficulty = difficulty;
+        Reward = reward;
+        QuestGiver = questGiver;
+    }
+    protected void QuestStartBaseInfo() {
+        WriteLine($"Quest Started: {Title}");
+        WriteLine($"Description: {Description}");
+        WriteLine($"Difficulty: {Difficulty}");
+        WriteLine($"Reward: {Reward}");
+        WriteLine($"Quest Giver: {QuestGiver}");
+    }
+    public abstract void StartQuest();
+    public abstract void CompleteQuest();
+
+}
+
+class QuestLog {
+    public List<Quest> Quests = new List<Quest>();
+
+    public void AddQuest(Quest quest) {
+        Quests.Add(quest);
+    }
+    public void RemoveAllQuests() {
+        foreach (var quest in Quests) {
+            Quests.Remove(quest);
+        }
+    }
+    public void ShowAll() {
+        foreach (var quest in Quests) {
+            WriteLine(quest.Title);
+        }
+    }
+}
+
+public class FetchQuest : Quest {
+    public string? ItemToFetch;
+    public string? Location;
+    public FetchQuest(string? title, string? description,
+        int difficulty, string? reward, string? questGiver,
+        string? itemToFetch, string? location) : base(title, description,
+            difficulty, reward, questGiver) {
+        ItemToFetch = itemToFetch;
+        Location = location;
+    }
+    public override void StartQuest() {
+        QuestStartBaseInfo();
+        WriteLine($"Item to Fetch: {ItemToFetch}");
+        WriteLine($"Location: {Location}");
+    }
+    public override void CompleteQuest() {
+        WriteLine($"Quest Completed: {Title}");
+        WriteLine($"You have fetched the {ItemToFetch} from {Location}.");
+        WriteLine($"You received: {Reward}");
+    }
+}
+
+public class HuntQuest : Quest {
+    public string? EnemyToHunt;
+    public int? EnemyCount;
+
+    public HuntQuest(string? title, string? description, int difficulty,
+        string? reward, string? questGiver, string? enemyToHunt, int enemyCount)
+    : base(title, description, difficulty, reward, questGiver){
+        EnemyToHunt = enemyToHunt;
+        EnemyCount = enemyCount;
+    }
+    public override void StartQuest() {
+        QuestStartBaseInfo();
+        WriteLine($"Enemies to be aware of: {EnemyToHunt}");
+        WriteLine($"Enemy Count: {EnemyCount}");
+    }
+    public void IncreaseEnemyCount() {
+        EnemyCount ++;
+    }
+    public void DecreaseEnemyCount() {
+        EnemyCount --;
+    }
+    public override void CompleteQuest() {
+        WriteLine($"Quest Completed: {Title}");
+        WriteLine($"You have hunted the {EnemyToHunt} which was/were about {EnemyCount} in numbers !");
+        WriteLine($"You received: {Reward}");
+    }
+}
+
+public class EscortQuest : Quest {
+    public string? NPCObject;
+    public int NPCCount;
+    public float Distance;
+    public int DefeatedEnemyCount;
+
+    public EscortQuest(string? title, string? description, int difficulty,
+        string? reward, string? questGiver, int nPCsToEscort, float distance, int defeatedEnemyCount)
+    : base(title, description, difficulty, reward, questGiver){
+        NPCCount = nPCsToEscort;
+        Distance = distance;
+        DefeatedEnemyCount = defeatedEnemyCount;
+    }
+
+    public override void StartQuest() {
+        QuestStartBaseInfo();
+        WriteLine($"NPCs to escort: {NPCCount} {NPCObject}");
+        WriteLine($"Distance to go: {Distance} miles");
+    }
+    public override void CompleteQuest() {
+        WriteLine($"Quest Completed: {Title}");
+        WriteLine($"You escorted {NPCCount} {NPCObject}'s to a safe zone !");
+        WriteLine($"You have defeated {DefeatedEnemyCount} enemies and walked for {Distance} miles");
+        WriteLine($"You received: {Reward}");
+    }
+}

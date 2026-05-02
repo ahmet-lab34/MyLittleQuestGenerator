@@ -1,0 +1,98 @@
+﻿public static class QuestManager {
+
+    public static FetchQuest CreateRandomFetchQuest() {
+        var titles = new Dictionary<string, string>() {
+            {"Find The CIA Agent", "Find The Agent who is stuck in a serious operation in the Middle East"},
+            {"Fetch The Royal Jewelry", "someone stole a royal Jewelry that is so valuable even Elizabeth || went to find that man,\n Your mission is to find him/her as soon as possible !"},
+        };
+        string[] rewards = {"Amazon prime for 30 days", "Basketball signed by Lebron James", "Fortnite OG"};
+        string[] questGivers = {"Donald Trump", "Joseph Stalin", "Nescafe 3 in 1"};
+        string[] items = { "Old Lady", "Steve", "Lost Dog", "Secret Package" };
+        string[] locations = {"Fortnite Save The World", "CS2 - Dust 2", "Jesse's home" };
+
+        Random rnd = new Random();
+
+        var keys = titles.Keys.ToList();
+
+        string randomTitles = keys[rnd.Next(keys.Count)];
+
+        return new FetchQuest(
+            title: randomTitles,
+            description: titles[randomTitles],
+            difficulty: rnd.Next(1, 4),
+            reward: rewards[rnd.Next(rewards.Length)],
+            questGiver: questGivers[rnd.Next(rewards.Length)],
+            itemToFetch: items[rnd.Next(items.Length)],
+            location: locations[rnd.Next(locations.Length)]
+        );
+    }
+    public static HuntQuest CreateRandomHuntQuest() {
+        var titles = new Dictionary<string, string>() {
+            {"Hunt The Deer", "Hunt the deer to gain experience in the wild life" },
+            {"Hunt The Wolves", "Hunt the Wolves to protect Maya and the Bear from any harm !" },
+        };
+        string[] rewards = {"Maya's Bear", "Micheal Jackson's white turning potion", "JD Vance's Toothpaste"};
+        string[] questGivers = {"Kratos", "Head & Shoulders 2 in 1", "Master YI"};
+        string[] enemiesToHunt = {"KSI's forehead'(s)", "IShowSpeed'(s)", "HyperX Cloud || HeadSet"};
+
+        Random rnd = new Random();
+
+        var keys = titles.Keys.ToList();
+
+        string randomTitle = keys[rnd.Next(keys.Count)];
+
+        return new HuntQuest(
+            title: randomTitle,
+            description: titles[randomTitle],
+            difficulty: rnd.Next(1, 4),
+            reward: rewards[rnd.Next(rewards.Length)],
+            questGiver: questGivers[rnd.Next(rewards.Length)],
+            enemyToHunt: enemiesToHunt[rnd.Next(rewards.Length)],
+            enemyCount: 3
+        );
+    }
+    public static EscortQuest CreateRandomEscortQuest() {
+        var titles = new Dictionary<string, string>() {
+            {$"Escort Maya And The Bear", "Escort Them to a safe location before the wolves kill them !" },
+            {"Escort Ahmet", "Escort Agent Ahmet to a safe location before he gets killed !" },
+            {"Escort GigaChad", "Escort GigaChad to the Sigma male party before he loses himself to becoming gay" }
+        };
+        string[] rewards = {"GigaChad's Dumbell", "Ahmet's Wise Lessons", "Class Pass From Can Teacher"};
+        string[] questGivers = {"Can Teacher", "Ahmet The Wise", "Angela Merkel"};
+
+        Random rnd = new Random();
+
+        var keys = titles.Keys.ToList();
+
+        string randomTitle = keys[rnd.Next(keys.Count)];
+
+        return new EscortQuest(
+            title: randomTitle,
+            description: titles[randomTitle],
+            difficulty: 2,
+            reward: rewards[rnd.Next(rewards.Length)],
+            questGiver: questGivers[rnd.Next(rewards.Length)],
+            nPCsToEscort: rnd.Next(1, 4),
+            distance: rnd.Next(5, 80),
+            defeatedEnemyCount: 0
+        );
+    }
+    static void Main()
+    {
+        WriteLine(">>> Fetch Quests <<<\n");
+
+        CreateRandomFetchQuest().StartQuest();
+
+        WriteLine("\n>>> Hunt Quests <<<\n");
+
+        CreateRandomHuntQuest().StartQuest();
+
+        CreateRandomHuntQuest().DecreaseEnemyCount();
+
+        CreateRandomHuntQuest().StartQuest();
+
+        WriteLine("\n>>> Escort Quests <<<\n");
+
+        CreateRandomEscortQuest().StartQuest();
+    }
+}
