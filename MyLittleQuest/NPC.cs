@@ -40,7 +40,24 @@ public class NPC
             1 => QuestManager.RandomHuntQuest(),
             _ => QuestManager.RandomEscortQuest()
         };
-        
+        // Use pattern matching to safely check for HuntQuest
+        if (quest is HuntQuest huntQuest) {
+
+            // You can now pass these values to the actual game
+            var huntingGame = new HuntingGame(huntQuest);
+            huntingGame.Main();
+        }
+        else if (quest is FetchQuest fetchQuest) {
+
+            // Start fetch game
+            var fetchGame = new FetchingGame();
+            fetchGame.Main();
+        }
+        else if (quest is EscortQuest escortQuest) {
+
+            // Start escort logic here...
+        }
+
         // After finding the quest it adds it to ActiveQuests
         ActiveQuests.Add(quest);
 
@@ -111,7 +128,7 @@ public class NPC
             Thread.Sleep(2000);
 
             // Starts the specific selected quest
-            selectedQuest.StartQuest();
+            //selectedQuest.StartQuest();
             WriteLine("Press any key to continue.");
             ReadKey(true);
             Clear();
@@ -125,11 +142,11 @@ public class NPC
                     break;
                 // if it is hunt
                 case HuntQuest hunt:
-                    WriteLine("This is Hunt quest game.");
+                    hunt.StartTheGame();
                     break;
                 // if it is escort
                 case EscortQuest escort:
-                    WriteLine("This is Escort quest game.");
+                    escort.StartTheGame();
                     break;
                 // Error handling
                 default:

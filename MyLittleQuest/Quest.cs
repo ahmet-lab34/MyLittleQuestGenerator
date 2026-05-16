@@ -100,8 +100,7 @@ public class FetchQuest : Quest {
 
     // Starts Fetch Quest game 
     public void StartTheGame() {
-        var game = new FetchingGame();
-        game.Main();
+        new FetchingGame().Main();
     }
 
     // Completion information for Fetch quest
@@ -143,14 +142,16 @@ public class HuntQuest : Quest {
     public void DecreaseEnemyCount() {
         EnemyCount --;
     }
+    // Starts Hunt Quest game 
+    public void StartTheGame()
+    {
+        new HuntingGame(this).Main();
+    }
     // // Hunt Quest Complete text
     public override void CompleteQuest() {
         WriteLine($"Quest Completed: {Title}");
         WriteLine($"You have hunted the {EnemyToHunt} which was/were about {EnemyCount} in numbers !");
         WriteLine($"You received: {Reward}");
-
-        Thread.Sleep(1000);
-        WriteLine("My apologies for that I was not able to make a game for HuntQuest due to the short amount of time I have. :(");
     }
 }
 // Escort quest class
@@ -161,17 +162,24 @@ public class EscortQuest : Quest {
     public int NPCCount { get; set; }
     public float Distance { get; set; }
     public int DefeatedEnemyCount { get; set; }
+    public string? Name { get; set; }
 
     // Empty Constructor
     public EscortQuest() { }
 
     // Specific values for escort quest to be instantiated (Alongsite Main class Quest)
     public EscortQuest(string? title, string? description, int difficulty,
-        string? reward, string? questGiver, int nPCsToEscort, float distance, int defeatedEnemyCount)
+        string? reward, string? questGiver, int nPCsToEscort, float distance, int defeatedEnemyCount, string escortNpcNames)
     : base(title, description, difficulty, reward, questGiver){
         NPCCount = nPCsToEscort;
         Distance = distance;
         DefeatedEnemyCount = defeatedEnemyCount;
+        Name = escortNpcNames;
+    }
+    // Starts Escort Quest game 
+    public void StartTheGame()
+    {
+        new EscortGame(this).Main();
     }
 
     // Escort quest specific start text 
@@ -187,8 +195,5 @@ public class EscortQuest : Quest {
         WriteLine($"You escorted {NPCCount} {NPCObject}'s to a safe zone !");
         WriteLine($"You have defeated {DefeatedEnemyCount} enemies and walked for {Distance} miles");
         WriteLine($"You received: {Reward}");
-
-        Thread.Sleep(1000);
-        WriteLine("My apologies for that I was not able to make a game for EscortQuest due to the short amount of time I have. :(");
     }
 }

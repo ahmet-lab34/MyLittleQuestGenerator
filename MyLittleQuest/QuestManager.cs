@@ -1,4 +1,3 @@
-
 // Quest Manager Class to determine the behaviour of every quest
 public static class QuestManager {
 
@@ -81,6 +80,7 @@ public static class QuestManager {
         };
         string[] escortRewards = {"GigaChad's Dumbell", "Ahmet's Wise Lessons", "Class Pass From Can Teacher"};
         string[] escortQuestGivers = {"Can Teacher", "Ahmet The Wise", "Angela Merkel"};
+        string[] escortNPCNames = { "Ahmet's flipflops", "The White House", "Uranus(the planet)" };
 
 
         var keys = escortTitles.Keys.ToList();
@@ -95,7 +95,8 @@ public static class QuestManager {
             questGiver: escortQuestGivers[rnd.Next(escortQuestGivers.Length)],
             nPCsToEscort: rnd.Next(1, 4),
             distance: rnd.Next(5, 80),
-            defeatedEnemyCount: 0
+            defeatedEnemyCount: 0,
+            escortNpcNames: escortNPCNames[rnd.Next(escortNPCNames.Length)]
         );
     }
 }

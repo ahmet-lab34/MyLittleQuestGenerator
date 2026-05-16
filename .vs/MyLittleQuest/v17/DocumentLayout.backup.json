@@ -1,38 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\ahmet\\OneDrive\\Desktop\\MyLittleQuest\\",
+  "WorkspaceRootPath": "C:\\Users\\ahmet\\OneDrive\\Desktop\\MyLittleQuestGenerator\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FCA1B2FC-C387-452B-A836-F35477943C08}|MyLittleQuest\\MyLittleQuest.csproj|c:\\users\\ahmet\\onedrive\\desktop\\mylittlequest\\mylittlequest\\quest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FCA1B2FC-C387-452B-A836-F35477943C08}|MyLittleQuest\\MyLittleQuest.csproj|c:\\users\\ahmet\\onedrive\\desktop\\mylittlequestgenerator\\mylittlequest\\quest games\\escortgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCA1B2FC-C387-452B-A836-F35477943C08}|MyLittleQuest\\MyLittleQuest.csproj|solutionrelative:mylittlequest\\quest games\\escortgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FCA1B2FC-C387-452B-A836-F35477943C08}|MyLittleQuest\\MyLittleQuest.csproj|c:\\users\\ahmet\\onedrive\\desktop\\mylittlequestgenerator\\mylittlequest\\quest games\\fetchinggame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCA1B2FC-C387-452B-A836-F35477943C08}|MyLittleQuest\\MyLittleQuest.csproj|solutionrelative:mylittlequest\\quest games\\fetchinggame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FCA1B2FC-C387-452B-A836-F35477943C08}|MyLittleQuest\\MyLittleQuest.csproj|c:\\users\\ahmet\\onedrive\\desktop\\mylittlequestgenerator\\mylittlequest\\quest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FCA1B2FC-C387-452B-A836-F35477943C08}|MyLittleQuest\\MyLittleQuest.csproj|solutionrelative:mylittlequest\\quest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FCA1B2FC-C387-452B-A836-F35477943C08}|MyLittleQuest\\MyLittleQuest.csproj|c:\\users\\ahmet\\onedrive\\desktop\\mylittlequest\\mylittlequest\\fetchinggame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FCA1B2FC-C387-452B-A836-F35477943C08}|MyLittleQuest\\MyLittleQuest.csproj|solutionrelative:mylittlequest\\fetchinggame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FCA1B2FC-C387-452B-A836-F35477943C08}|MyLittleQuest\\MyLittleQuest.csproj|c:\\users\\ahmet\\onedrive\\desktop\\mylittlequestgenerator\\mylittlequest\\quest games\\huntinggame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCA1B2FC-C387-452B-A836-F35477943C08}|MyLittleQuest\\MyLittleQuest.csproj|solutionrelative:mylittlequest\\quest games\\huntinggame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ahmet\\OneDrive\\Desktop\\MyLittleQuest\\MyLittleQuest\\bin\\Debug\\net9.0\\QuestHistory.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MyLittleQuest\\bin\\Debug\\net9.0\\QuestHistory.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ahmet\\OneDrive\\Desktop\\MyLittleQuest\\MyLittleQuest\\bin\\Debug\\net9.0\\CompletedQuests.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MyLittleQuest\\bin\\Debug\\net9.0\\CompletedQuests.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ahmet\\OneDrive\\Desktop\\MyLittleQuest\\MyLittleQuest\\bin\\Debug\\net9.0\\ActiveQuests.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MyLittleQuest\\bin\\Debug\\net9.0\\ActiveQuests.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FCA1B2FC-C387-452B-A836-F35477943C08}|MyLittleQuest\\MyLittleQuest.csproj|c:\\users\\ahmet\\onedrive\\desktop\\mylittlequest\\mylittlequest\\questsaves.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FCA1B2FC-C387-452B-A836-F35477943C08}|MyLittleQuest\\MyLittleQuest.csproj|solutionrelative:mylittlequest\\questsaves.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FCA1B2FC-C387-452B-A836-F35477943C08}|MyLittleQuest\\MyLittleQuest.csproj|c:\\users\\ahmet\\onedrive\\desktop\\mylittlequest\\mylittlequest\\npc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FCA1B2FC-C387-452B-A836-F35477943C08}|MyLittleQuest\\MyLittleQuest.csproj|solutionrelative:mylittlequest\\npc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FCA1B2FC-C387-452B-A836-F35477943C08}|MyLittleQuest\\MyLittleQuest.csproj|c:\\users\\ahmet\\onedrive\\desktop\\mylittlequest\\mylittlequest\\questmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FCA1B2FC-C387-452B-A836-F35477943C08}|MyLittleQuest\\MyLittleQuest.csproj|c:\\users\\ahmet\\onedrive\\desktop\\mylittlequestgenerator\\mylittlequest\\questmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FCA1B2FC-C387-452B-A836-F35477943C08}|MyLittleQuest\\MyLittleQuest.csproj|solutionrelative:mylittlequest\\questmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FCA1B2FC-C387-452B-A836-F35477943C08}|MyLittleQuest\\MyLittleQuest.csproj|c:\\users\\ahmet\\onedrive\\desktop\\mylittlequestgenerator\\mylittlequest\\npc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCA1B2FC-C387-452B-A836-F35477943C08}|MyLittleQuest\\MyLittleQuest.csproj|solutionrelative:mylittlequest\\npc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,104 +34,85 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "NPC.cs",
-              "DocumentMoniker": "C:\\Users\\ahmet\\OneDrive\\Desktop\\MyLittleQuest\\MyLittleQuest\\NPC.cs",
-              "RelativeDocumentMoniker": "MyLittleQuest\\NPC.cs",
-              "ToolTip": "C:\\Users\\ahmet\\OneDrive\\Desktop\\MyLittleQuest\\MyLittleQuest\\NPC.cs",
-              "RelativeToolTip": "MyLittleQuest\\NPC.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHcBAAAXAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "EscortGame.cs",
+              "DocumentMoniker": "C:\\Users\\ahmet\\OneDrive\\Desktop\\MyLittleQuestGenerator\\MyLittleQuest\\Quest Games\\EscortGame.cs",
+              "RelativeDocumentMoniker": "MyLittleQuest\\Quest Games\\EscortGame.cs",
+              "ToolTip": "C:\\Users\\ahmet\\OneDrive\\Desktop\\MyLittleQuestGenerator\\MyLittleQuest\\Quest Games\\EscortGame.cs",
+              "RelativeToolTip": "MyLittleQuest\\Quest Games\\EscortGame.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-07T11:29:39.201Z"
+              "WhenOpened": "2026-05-16T20:17:10.11Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "ActiveQuests.json",
-              "DocumentMoniker": "C:\\Users\\ahmet\\OneDrive\\Desktop\\MyLittleQuest\\MyLittleQuest\\bin\\Debug\\net9.0\\ActiveQuests.json",
-              "RelativeDocumentMoniker": "MyLittleQuest\\bin\\Debug\\net9.0\\ActiveQuests.json",
-              "ToolTip": "C:\\Users\\ahmet\\OneDrive\\Desktop\\MyLittleQuest\\MyLittleQuest\\bin\\Debug\\net9.0\\ActiveQuests.json",
-              "RelativeToolTip": "MyLittleQuest\\bin\\Debug\\net9.0\\ActiveQuests.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-07T16:22:59.68Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "QuestSaves.cs",
-              "DocumentMoniker": "C:\\Users\\ahmet\\OneDrive\\Desktop\\MyLittleQuest\\MyLittleQuest\\QuestSaves.cs",
-              "RelativeDocumentMoniker": "MyLittleQuest\\QuestSaves.cs",
-              "ToolTip": "C:\\Users\\ahmet\\OneDrive\\Desktop\\MyLittleQuest\\MyLittleQuest\\QuestSaves.cs",
-              "RelativeToolTip": "MyLittleQuest\\QuestSaves.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwBsAAAAcAAAAAAAAAA==",
+              "Title": "QuestManager.cs",
+              "DocumentMoniker": "C:\\Users\\ahmet\\OneDrive\\Desktop\\MyLittleQuestGenerator\\MyLittleQuest\\QuestManager.cs",
+              "RelativeDocumentMoniker": "MyLittleQuest\\QuestManager.cs",
+              "ToolTip": "C:\\Users\\ahmet\\OneDrive\\Desktop\\MyLittleQuestGenerator\\MyLittleQuest\\QuestManager.cs",
+              "RelativeToolTip": "MyLittleQuest\\QuestManager.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAkwFcAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-05T21:07:41.296Z"
+              "WhenOpened": "2026-05-16T19:47:37.48Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "CompletedQuests.json",
-              "DocumentMoniker": "C:\\Users\\ahmet\\OneDrive\\Desktop\\MyLittleQuest\\MyLittleQuest\\bin\\Debug\\net9.0\\CompletedQuests.json",
-              "RelativeDocumentMoniker": "MyLittleQuest\\bin\\Debug\\net9.0\\CompletedQuests.json",
-              "ToolTip": "C:\\Users\\ahmet\\OneDrive\\Desktop\\MyLittleQuest\\MyLittleQuest\\bin\\Debug\\net9.0\\CompletedQuests.json",
-              "RelativeToolTip": "MyLittleQuest\\bin\\Debug\\net9.0\\CompletedQuests.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-07T16:22:50.827Z"
+              "Title": "HuntingGame.cs",
+              "DocumentMoniker": "C:\\Users\\ahmet\\OneDrive\\Desktop\\MyLittleQuestGenerator\\MyLittleQuest\\Quest Games\\HuntingGame.cs",
+              "RelativeDocumentMoniker": "MyLittleQuest\\Quest Games\\HuntingGame.cs",
+              "ToolTip": "C:\\Users\\ahmet\\OneDrive\\Desktop\\MyLittleQuestGenerator\\MyLittleQuest\\Quest Games\\HuntingGame.cs",
+              "RelativeToolTip": "MyLittleQuest\\Quest Games\\HuntingGame.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAowAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T19:28:51.161Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "QuestHistory.json",
-              "DocumentMoniker": "C:\\Users\\ahmet\\OneDrive\\Desktop\\MyLittleQuest\\MyLittleQuest\\bin\\Debug\\net9.0\\QuestHistory.json",
-              "RelativeDocumentMoniker": "MyLittleQuest\\bin\\Debug\\net9.0\\QuestHistory.json",
-              "ToolTip": "C:\\Users\\ahmet\\OneDrive\\Desktop\\MyLittleQuest\\MyLittleQuest\\bin\\Debug\\net9.0\\QuestHistory.json",
-              "RelativeToolTip": "MyLittleQuest\\bin\\Debug\\net9.0\\QuestHistory.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-07T16:22:13.62Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FetchingGame.cs",
-              "DocumentMoniker": "C:\\Users\\ahmet\\OneDrive\\Desktop\\MyLittleQuest\\MyLittleQuest\\FetchingGame.cs",
-              "RelativeDocumentMoniker": "MyLittleQuest\\FetchingGame.cs",
-              "ToolTip": "C:\\Users\\ahmet\\OneDrive\\Desktop\\MyLittleQuest\\MyLittleQuest\\FetchingGame.cs",
-              "RelativeToolTip": "MyLittleQuest\\FetchingGame.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-05T15:17:57.781Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "Quest.cs",
-              "DocumentMoniker": "C:\\Users\\ahmet\\OneDrive\\Desktop\\MyLittleQuest\\MyLittleQuest\\Quest.cs",
+              "DocumentMoniker": "C:\\Users\\ahmet\\OneDrive\\Desktop\\MyLittleQuestGenerator\\MyLittleQuest\\Quest.cs",
               "RelativeDocumentMoniker": "MyLittleQuest\\Quest.cs",
-              "ToolTip": "C:\\Users\\ahmet\\OneDrive\\Desktop\\MyLittleQuest\\MyLittleQuest\\Quest.cs",
+              "ToolTip": "C:\\Users\\ahmet\\OneDrive\\Desktop\\MyLittleQuestGenerator\\MyLittleQuest\\Quest.cs",
               "RelativeToolTip": "MyLittleQuest\\Quest.cs",
-              "ViewState": "AgIAAJsAAAAAAAAAAAAswKoAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAIoAAAAAAAAAAAAuwJkAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-05T10:34:33.685Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "QuestManager.cs",
-              "DocumentMoniker": "C:\\Users\\ahmet\\OneDrive\\Desktop\\MyLittleQuest\\MyLittleQuest\\QuestManager.cs",
-              "RelativeDocumentMoniker": "MyLittleQuest\\QuestManager.cs",
-              "ToolTip": "C:\\Users\\ahmet\\OneDrive\\Desktop\\MyLittleQuest\\MyLittleQuest\\QuestManager.cs",
-              "RelativeToolTip": "MyLittleQuest\\QuestManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFoAAAAfAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "NPC.cs",
+              "DocumentMoniker": "C:\\Users\\ahmet\\OneDrive\\Desktop\\MyLittleQuestGenerator\\MyLittleQuest\\NPC.cs",
+              "RelativeDocumentMoniker": "MyLittleQuest\\NPC.cs",
+              "ToolTip": "C:\\Users\\ahmet\\OneDrive\\Desktop\\MyLittleQuestGenerator\\MyLittleQuest\\NPC.cs",
+              "RelativeToolTip": "MyLittleQuest\\NPC.cs",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAAAH4AAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-05T11:15:00.457Z"
+              "WhenOpened": "2026-04-07T11:29:39.201Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FetchingGame.cs",
+              "DocumentMoniker": "C:\\Users\\ahmet\\OneDrive\\Desktop\\MyLittleQuestGenerator\\MyLittleQuest\\Quest Games\\FetchingGame.cs",
+              "RelativeDocumentMoniker": "MyLittleQuest\\Quest Games\\FetchingGame.cs",
+              "ToolTip": "C:\\Users\\ahmet\\OneDrive\\Desktop\\MyLittleQuestGenerator\\MyLittleQuest\\Quest Games\\FetchingGame.cs",
+              "RelativeToolTip": "MyLittleQuest\\Quest Games\\FetchingGame.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAqwAUAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-05T15:17:57.781Z",
+              "EditorCaption": ""
             }
           ]
         }

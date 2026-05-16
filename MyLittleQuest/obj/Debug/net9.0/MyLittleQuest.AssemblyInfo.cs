@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MyLittleQuest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c4f47d79db12095046e142b724158f4964b7e506")]
 [assembly: System.Reflection.AssemblyProductAttribute("MyLittleQuest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MyLittleQuest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
